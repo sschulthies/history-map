@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Medieval Europe Interactive Map</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+  <h1>Medieval Europe Map Quiz</h1>
+  <p>Click the correct region on the map.</p>
+
+  <section class="quiz-card">
+    <div class="status-row">
+      <div id="questionCounter">Question 1</div>
+      <div id="scoreDisplay">Score: 0</div>
+    </div>
+
+    <h2 id="prompt">Loading...</h2>
+    <div id="feedback" class="feedback"></div>
+
+    <div class="map-wrap">
+      <svg id="map" viewBox="0 0 800 500" aria-label="Simplified medieval Europe practice map">
+        <rect width="800" height="500" fill="#eaf4fb"></rect>
+
+        <path id="england" class="region" d="M150,130 L230,110 L260,180 L210,240 L140,220 Z" data-name="Kingdom of England"></path>
+        <path id="france" class="region" d="M270,190 L410,180 L430,310 L310,360 L230,280 Z" data-name="Kingdom of France"></path>
+        <path id="hre" class="region" d="M420,150 L560,150 L610,280 L500,350 L430,300 Z" data-name="Holy Roman Empire"></path>
+        <path id="castile" class="region" d="M220,340 L350,350 L360,440 L230,450 L170,400 Z" data-name="Kingdom of Castile"></path>
+        <path id="aragon" class="region" d="M360,350 L430,335 L455,420 L370,440 Z" data-name="Kingdom of Aragon"></path>
+        <path id="italian-states" class="region" d="M500,340 L575,365 L610,450 L535,430 Z" data-name="Italian States"></path>
+        <path id="hungary" class="region" d="M590,280 L710,285 L735,370 L620,375 L560,330 Z" data-name="Kingdom of Hungary"></path>
+        <path id="byzantium" class="region" d="M640,390 L760,390 L780,470 L640,455 Z" data-name="Byzantine Empire"></path>
+
+        <text x="178" y="175">England</text>
+        <text x="315" y="265">France</text>
+        <text x="500" y="240">HRE</text>
+        <text x="250" y="400">Castile</text>
+        <text x="375" y="395">Aragon</text>
+        <text x="520" y="400">Italy</text>
+        <text x="620" y="330">Hungary</text>
+        <text x="665" y="430">Byzantium</text>
+      </svg>
+    </div>
+
+    <button id="nextButton" disabled>Next Question</button>
+    <button id="restartButton" class="secondary">Restart</button>
+  </section>
+</main>
+<script src="questions.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
